@@ -1,6 +1,23 @@
 # Self-Healing Smart Grid Using Agentic AI  
 ## One Unified Framework for Fault Prediction, Autonomous Isolation, and Real-Time Restoration
 
+## Working Reference Implementation (ML)
+
+This repository now includes a **working machine-learning model** for the fault-prediction stage described in this paper:
+
+- Training script: `train_fault_predictor.py`
+- Model code: `src/fault_prediction_model.py`
+- Output artifact: `artifacts/fault_predictor_model.json`
+
+### Run
+```bash
+python train_fault_predictor.py
+```
+
+The script trains a dependency-free logistic regression model (implemented from scratch) on synthetic smart-grid telemetry aligned with the paper's feature groups: electrical, contextual/weather, asset-health, and topology indicators.
+
+---
+
 ### Abstract
 Modern power systems are increasingly exposed to cascading disruptions caused by extreme weather, distributed generation volatility, cyber-physical attacks, and aging infrastructure. Traditional supervisory control and data acquisition (SCADA)-centric operations are often deterministic, siloed, and too slow for sub-second fault response. This paper proposes a unified **Agentic AI** framework for self-healing smart grids that integrates three tightly coupled capabilities: **fault prediction**, **autonomous isolation**, and **real-time restoration**. The architecture combines edge intelligence, graph-based grid digital twins, multi-agent orchestration, and safety-constrained reinforcement planning to deliver adaptive, explainable, and resilient operations. We present system components, agent roles, communication contracts, optimization objectives, and execution loops from event detection to service recovery. We also define an evaluation protocol with reliability, latency, and stability metrics, and discuss deployment guardrails including cybersecurity, human override, and regulatory compliance. The framework demonstrates how coordinated autonomous agents can transition grid operations from reactive protection to predictive and restorative autonomy.
 
